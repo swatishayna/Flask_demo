@@ -1,0 +1,188 @@
+Command: Connect
+cassandra
+
+{
+    "path": "F:\\data science\\ineuron\\Databases\\Cassandra",
+    "clientid" : "xzwnPGxiZZZdvZHEGQeUjxEM",
+    "clientsecret" : "Iwr4DW-qeDFYgf,x1BtjHufBMgZE59r7pbHHeIvHPRx0p_h3OHLsssxDTU3_L_yK4DF0bouiFg0.2vxr.Z,1Dp3i5Kx2xZ4p7qqvINt,sJEco0fgMkRrZ7UaCf7-x2N2",
+    "database":"cassandra"
+}
+
+mysql
+{
+    "path": "localhost",
+    "clientid" : "root",
+    "clientsecret" : "1450",
+    "database":"mysql"
+}
+
+mongodb:
+
+{
+    "database":"mongodb",
+    "client": "mongodb+srv://testmongo:<password>@cluster0.u4kdi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "keyspace": "company"
+}
+
+
+Command: Create Table
+cassandra:
+
+{
+    "path": "F:\\data science\\ineuron\\Databases\\Cassandra",
+    "clientid" : "xzwnPGxiZZZdvZHEGQeUjxEM",
+    "clientsecret" : "Iwr4DW-qeDFYgf,x1BtjHufBMgZE59r7pbHHeIvHPRx0p_h3OHLsssxDTU3_L_yK4DF0bouiFg0.2vxr.Z,1Dp3i5Kx2xZ4p7qqvINt,sJEco0fgMkRrZ7UaCf7-x2N2",
+    "keyspace":"STUDENT",
+    "tablename":"EMPLOYEE",
+    "columns":"empid int PRIMARY KEY,fname text,lname text, dept text, salary int",
+    "database":"cassandra"
+}
+
+mysql:
+
+{
+    "path": "localhost",
+    "clientid" : "root",
+    "clientsecret" : "1450",
+    "keyspace":"test",
+    "tablename":"EMPLOYEE",
+    "columns":"empid int(20) PRIMARY KEY,fname varchar(40),lname varchar(40), dept varchar(40), salary int(20)",
+    "database":"mysql"
+}
+
+mongodb:
+
+
+{
+    "database":"mongodb",
+    "client": "mongodb+srv://testmongo:<password>@cluster0.u4kdi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "keyspace": "company",
+    "tablename":"employee"
+}
+
+Command: Insert
+cassandra:
+{
+    "path": "F:\\data science\\ineuron\\Databases\\Cassandra",
+    "clientid" : "xzwnPGxiZZZdvZHEGQeUjxEM",
+    "clientsecret" : "Iwr4DW-qeDFYgf,x1BtjHufBMgZE59r7pbHHeIvHPRx0p_h3OHLsssxDTU3_L_yK4DF0bouiFg0.2vxr.Z,1Dp3i5Kx2xZ4p7qqvINt,sJEco0fgMkRrZ7UaCf7-x2N2",
+    "keyspace":"STUDENT",
+    "tablename":"EMPLOYEE",
+    "columns":"empid,fname,lname, dept, salary",
+    "values":"1101,'John','David','Finance',90000",
+    "database":"cassandra"
+}
+
+
+mysql:
+
+{
+    "path": "localhost",
+    "clientid" : "root",
+    "clientsecret" : "1450",
+    "keyspace":"test",
+    "tablename":"EMPLOYEE",
+    "columns":"empid,fname,lname, dept, salary",
+    "values":"1101,'John','David','Finance',90000",
+    "database":"mysql"
+}
+
+
+
+
+Command:Update
+cassandra:
+
+
+{
+    "path": "F:\\data science\\ineuron\\Databases\\Cassandra",
+    "clientid" : "xzwnPGxiZZZdvZHEGQeUjxEM",
+    "clientsecret" : "Iwr4DW-qeDFYgf,x1BtjHufBMgZE59r7pbHHeIvHPRx0p_h3OHLsssxDTU3_L_yK4DF0bouiFg0.2vxr.Z,1Dp3i5Kx2xZ4p7qqvINt,sJEco0fgMkRrZ7UaCf7-x2N2",
+    "keyspace":"STUDENT",
+    "tablename":"EMPLOYEE",
+    "column_value" : "fname='Warner'",
+    "where_col_val" : "empid=1101",
+    "database":"cassandra"
+}
+
+mysql:
+
+{
+    "path": "localhost",
+    "clientid" : "root",
+    "clientsecret" : "1450",
+    "keyspace":"test",
+    "tablename":"EMPLOYEE",
+    "column_value" : "fname='Warner'",
+    "where_col_val" : "empid=1101",
+    "database":"mysql"
+}
+
+
+Command:truncate
+cassandra:
+
+
+{
+    "path": "F:\\data science\\ineuron\\Databases\\Cassandra",
+    "clientid" : "xzwnPGxiZZZdvZHEGQeUjxEM",
+    "clientsecret" : "Iwr4DW-qeDFYgf,x1BtjHufBMgZE59r7pbHHeIvHPRx0p_h3OHLsssxDTU3_L_yK4DF0bouiFg0.2vxr.Z,1Dp3i5Kx2xZ4p7qqvINt,sJEco0fgMkRrZ7UaCf7-x2N2",
+    "keyspace":"STUDENT",
+    "tablename":"EMPLOYEE",
+    "database":"cassandra"
+}
+
+mysql:
+
+
+{
+    "path": "localhost",
+    "clientid" : "root",
+    "clientsecret" : "1450",
+    "keyspace":"test",
+    "tablename":"EMPLOYEE",
+    "database":"mysql"
+}
+
+Command:bulk insertion
+cassandra:
+{
+    "path": "F:\\data science\\ineuron\\Databases\\Cassandra",
+    "clientid" : "xzwnPGxiZZZdvZHEGQeUjxEM",
+    "clientsecret" : "Iwr4DW-qeDFYgf,x1BtjHufBMgZE59r7pbHHeIvHPRx0p_h3OHLsssxDTU3_L_yK4DF0bouiFg0.2vxr.Z,1Dp3i5Kx2xZ4p7qqvINt,sJEco0fgMkRrZ7UaCf7-x2N2",
+    "keyspace":"STUDENT",
+    "tablename":"EMPLOYEE",
+    "columns":"empid,fname,lname, dept, salary",
+    "file":"F:\\data science\\ineuron\\flask\\data1.xlsx",
+    "total_col": 5,
+    "database":"cassandra"
+}
+
+mysql:
+
+{
+    "path": "localhost",
+    "clientid" : "root",
+    "clientsecret" : "1450",
+    "keyspace":"test",
+    "tablename":"EMPLOYEE",
+    "columns":"empid,fname,lname, dept, salary",
+    "file":"F:\\data science\\ineuron\\flask\\data1.xlsx",
+    "total_col": 5,
+    "database":"mysql"
+}
+
+
+
+
+Note:
+cassandra:
+1.code for csv file insertion 
+
+mysql:
+1.code for excel file insertion
+Implemented:
+1.Inheritance
+2.Exceptional handling
+3.super method
+
